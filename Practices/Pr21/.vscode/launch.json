@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "trainaddiction",
+      "request": "launch",
+      "mainClass": "trainaddiction",
+      "projectName": "Pr21_d3e3e373"
+    },
+    {
+      "type": "java",
+      "name": "trainaddiction2",
+      "request": "launch",
+      "mainClass": "trainaddiction2",
+      "projectName": "Pr21_d3e3e373"
+    },
+    {
+      "type": "java",
+      "name": "thermostat",
+      "request": "launch",
+      "mainClass": "thermostat",
+      "projectName": "Pr21_d3e3e373"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/arundeegutla/Library/CloudStorage/OneDrive-Knights-UniversityofCentralFlorida/Prog Team/Practices/Pr21",
+      "program": "/Users/arundeegutla/Library/CloudStorage/OneDrive-Knights-UniversityofCentralFlorida/Prog Team/Practices/Pr21/build/Debug/outDebug"
+    }
+  ]
+}

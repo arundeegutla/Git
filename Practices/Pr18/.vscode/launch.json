@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "greedypolygons",
+      "request": "launch",
+      "mainClass": "greedypolygons",
+      "projectName": "Pr18_d3e3e35b"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/arundeegutla/Library/CloudStorage/OneDrive-Knights-UniversityofCentralFlorida/Prog Team/Practices/Pr18",
+      "program": "/Users/arundeegutla/Library/CloudStorage/OneDrive-Knights-UniversityofCentralFlorida/Prog Team/Practices/Pr18/build/Debug/outDebug"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/arundeegutla/Library/CloudStorage/OneDrive-Knights-UniversityofCentralFlorida/Second-Year/Fall/Prog Team/Practices/Pr11",
+      "program": "/Users/arundeegutla/Library/CloudStorage/OneDrive-Knights-UniversityofCentralFlorida/Second-Year/Fall/Prog Team/Practices/Pr11/build/Debug/outDebug"
+    }
+  ]
+}
