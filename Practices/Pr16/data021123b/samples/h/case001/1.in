@@ -1,5 +1,0 @@
-2
-SuperGame::PROGRAM 0
-
-HelpPackage::HelpFunction 2
-HelpPackage::HelpFunction SuperGame::PROGRAM
