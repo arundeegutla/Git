@@ -1,121 +1,92 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.StringTokenizer;
-
+/**
+ * trainaddiction
+ */
 public class trainaddiction {
+	public static int MOD = (int)1e9 + 7;
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int numCases = in.nextInt();
+		loop:while (numCases-->0) {
 
-    static int MOD = (int) 1e9 + 7;
-    public static void main(String[] args) {
-        FastScanner s = new FastScanner();
-        PrintWriter pw = new PrintWriter(System.out);
-        int t = s.nextInt();
-        while (t-- > 0) {
-            int n = s.nextInt(), k = s.nextInt();
-            long[] arr = new long[k], freq = new long[51];
-            for (int i = 0; i < k; i++) {
-                arr[i] = s.nextInt();
-                freq[(int) arr[i]]++;
-            }
-            int[] dp = new int[n + 1];
-            for (int i = 0; i < k; i++) {
-                if (arr[i] <= n) dp[(int) arr[i]] = 1;
-            }
-            for (int i = 0; i <= n; i++) {
-                for (int j = 0; j < k; j++) {
-                    if (i + arr[j] <= n) {
-                        dp[(int) (i + arr[j])] += dp[i];
-                        dp[(int) (i + arr[j])] %= MOD;
-                    }
-                }
-            }
-            for (int i = 0; i < 51; i++) {
-                if (freq[i] != 0) {
-                    dp[n] *= freq[i];
-                    dp[n] %= MOD;
-                }
-            }
-            pw.println(dp[n] == 0 ? "IMPOSSIBLE" : dp[n]);
-        }
-        pw.flush();
-    }
-}
+			int n = in.nextInt();
+			int k = in.nextInt();
+			int[] values = new int[k];
+			int[] coeff = new int[51];
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-* 							Fast Scanner								*
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-class FastScanner {
-    BufferedReader br; StringTokenizer st;
-    public FastScanner() {
-        try {
-            br = new BufferedReader(new InputStreamReader(System.in));
-            st = new StringTokenizer(br.readLine());
-        } catch (Exception e){e.printStackTrace();}
-    }
-    public String next() {
-        if (st.hasMoreTokens()) return st.nextToken();
-        try {st = new StringTokenizer(br.readLine());}
-        catch (Exception e) {e.printStackTrace();}
-        return st.nextToken();
-    }
-    public short nextShort() {return Short.parseShort(next());}
-    public int nextInt() {return Integer.parseInt(next());}
-    public long nextLong() {return Long.parseLong(next());}
-    public double nextDouble() {return Double.parseDouble(next());}
-    public String nextLine() {
-        String line = "";
-        if(st.hasMoreTokens()) line = st.nextToken();
-        else try {return br.readLine();}catch(IOException e){e.printStackTrace();}
-        while(st.hasMoreTokens()) line += " "+st.nextToken();
-        return line;
-    }
-    public int[] nextIntArray(int n){
-        int[] array=new int[n];
-        for(int i=0;i<n;++i)array[i]=nextInt();
-        return array;
-      }
-      public int[] nextSortedIntArray(int n){
-        int array[]=nextIntArray(n);
-        Arrays.sort(array);
-        return array;
-      }
-      public ArrayList<Integer> nextIntArrayList(int n){
-        ArrayList<Integer> ar= new ArrayList<>();
-        for(int i=0;i<n;i++)
-        ar.add(nextInt());
-        return ar;
-      }
-      public ArrayList<Long> nextLongArrayList(int n){
-        ArrayList<Long> ar= new ArrayList<>();
-        for(int i=0;i<n;i++)
-        ar.add(nextLong());
-        return ar;
-      }
-  
-      public int[] nextPrefixSumIntArray(int n){
-        int[] array=new int[n];
-        array[0]=nextInt();
-        for(int i=1;i<n;++i)array[i]=array[i-1]+nextInt();
-        return array;
-      }
-      public long[] nextLongArray(int n){
-        long[] array=new long[n];
-        for(int i=0;i<n;++i)array[i]=nextLong();
-        return array;
-      }
-      public long[] nextPrefixSumLongArray(int n){
-        long[] array=new long[n];
-        array[0]=nextInt();
-        for(int i=1;i<n;++i)array[i]=array[i-1]+nextInt();
-        return array;
-      }
-      public long[] nextSortedLongArray(int n){
-        long array[]=nextLongArray(n);
-        Arrays.sort(array);
-        return array;
-      }
+			for (int i = 0; i < values.length; i++) {
+				values[i] = in.nextInt();
+				coeff[values[i]]++;
+			}
+
+			long[] dp = new long[50];
+			Arrays.fill(dp, -1); dp[0] = 1;
+			for (int i = 0; i < 50; i++) go(i, values, dp);
+
+
+			long[][] matrix = new long[50][50];
+			for (int i=0; i<50; i++) matrix[49][49-i] = coeff[i+1];
+			for (int i=1; i<50; i++) matrix[i-1][i] = 1;
+			matrix = matrixExpo(matrix, n);
+
+			long ans = 0;
+			boolean modded = false;
+			for (int i = 0; i < matrix.length; i++) {
+				ans += (matrix[0][i] * dp[i]) % MOD;
+				if (ans >= MOD) {
+					ans %= MOD; 
+					modded = true;
+				}
+			}
+
+			if (ans == 0 && !modded) {
+				System.out.println("IMPOSSIBLE");
+				continue loop;
+			}
+
+			System.out.println(ans);
+		}
+	}
+
+	public static long[][] matrixExpo(long[][] m, int exp) {
+		if (exp == 0) return identity(m.length);
+		if (exp%2 == 0) {
+			long[][] tmp = matrixExpo(m, exp/2);
+			return multiply(tmp, tmp);
+		}
+		long[][] tmp = matrixExpo(m, exp-1);
+		return multiply(tmp, m);
+	}
+
+	private static long[][] identity(int n) {
+		long[][] m = new long[n][n];
+		for (int i = 0; i < n; i++) m[i][i] = 1;
+		return m;
+	}
+
+	public static long[][] multiply(long[][] A, long[][] B) {
+		int row1 = A.length, col1 = A[0].length;
+		int row2 = B.length, col2 = B[0].length;
+		long C[][] = new long[row1][col2];
+		for (int i = 0; i < row1; i++)
+			for (int j = 0; j < col2; j++)
+				for (int k = 0; k < row2; k++)
+					C[i][j] = (C[i][j] += (A[i][k] * B[k][j]) % MOD) % MOD;
+		return C;
+	}
+
+	private static long go(int need, int[] values, long[] memo) {
+		if (need == 0) return 1;
+		if (need < 0) return 0;
+		if (memo[need] != -1) return memo[need];
+
+		long tot = 0;
+		for (int i : values) {
+			tot += go(need-i, values, memo);
+			tot %= MOD;
+		}
+
+		return memo[need] = tot;
+	}
 }
