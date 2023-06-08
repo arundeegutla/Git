@@ -18,40 +18,25 @@ public class d {
             // Insert code here.
             int n = in.nextInt();
 
-            if (n%2 == 1) {
-                System.out.println(n==1?1:-1);
+            if (n%2==1) {
+                out.println(n==1?1:-1);
                 continue;
             }
 
-
             int[] ans = new int[n];
-            boolean[] used = new boolean[n+1];
 
-            boolean[] b = new boolean[n+1];
-
-            ans[0] = n;
-            ans[1] = 1;
-            b[1] = true;
-            b[2] = true;
-
-            int sum = n+1;
-            for (int i = 2; i < n; i++) {
-                int c = sum;
-                while (b[(c % n) + 1]) {
-
-                }
-                ans[i] = c-sum;
-                b[(c % n) + 1] = true;
-                sum = c;
+            for (int i = 0; i < n; i+=2) {
+                ans[i] = n-i;
+                ans[i+1] = i+1;
             }
 
-
-            System.out.println(Arrays.toString(ans));
-            int[] perm = new int[n+1];
-            boolean[] used = new boolean[n+1];
-            go(1, n+1, perm, used);
-            System.out.println();
+            out.println(ans);
+            // int[] perm = new int[n+1];
+            // boolean[] used = new boolean[n+1];
+            // go(1, n+1, perm, used);
+            // System.out.println();
         }
+        out.flush();
     }
 
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 

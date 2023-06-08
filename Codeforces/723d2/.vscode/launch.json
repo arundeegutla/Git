@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/arundeegutla/Library/CloudStorage/OneDrive-Knights-UniversityofCentralFlorida/Prog_Team/Git/Codeforces/723d2",
+      "program": "/Users/arundeegutla/Library/CloudStorage/OneDrive-Knights-UniversityofCentralFlorida/Prog_Team/Git/Codeforces/723d2/build/Debug/outDebug"
+    }
+  ]
+}

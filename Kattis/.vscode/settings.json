@@ -1,5 +1,69 @@
 {
-    "files.associations": {
-        "vector": "cpp"
-    }
+  "files.associations": {
+    "vector": "cpp",
+    "iostream": "cpp",
+    "__hash_table": "cpp",
+    "__tree": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "filesystem": "cpp",
+    "__locale": "cpp",
+    "ios": "cpp",
+    "bit": "cpp",
+    "complex": "cpp",
+    "valarray": "cpp",
+    "queue": "cpp",
+    "__split_buffer": "cpp",
+    "deque": "cpp",
+    "string": "cpp",
+    "random": "cpp",
+    "iosfwd": "cpp",
+    "stack": "cpp",
+    "set": "cpp",
+    "cstddef": "cpp",
+    "unordered_set": "cpp",
+    "__bit_reference": "cpp",
+    "limits": "cpp",
+    "chrono": "cpp",
+    "algorithm": "cpp",
+    "regex": "cpp",
+    "__string": "cpp",
+    "array": "cpp"
+  },
+  "C_Cpp_Runner.cCompilerPath": "clang",
+  "C_Cpp_Runner.cppCompilerPath": "clang++",
+  "C_Cpp_Runner.debuggerPath": "lldb",
+  "C_Cpp_Runner.cStandard": "",
+  "C_Cpp_Runner.cppStandard": "",
+  "C_Cpp_Runner.msvcBatchPath": "",
+  "C_Cpp_Runner.useMsvc": false,
+  "C_Cpp_Runner.warnings": [
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Wshadow",
+    "-Wformat=2",
+    "-Wconversion",
+    "-Wnull-dereference",
+    "-Wsign-conversion"
+  ],
+  "C_Cpp_Runner.enableWarnings": true,
+  "C_Cpp_Runner.warningsAsError": false,
+  "C_Cpp_Runner.compilerArgs": [],
+  "C_Cpp_Runner.linkerArgs": [],
+  "C_Cpp_Runner.includePaths": [],
+  "C_Cpp_Runner.includeSearch": [
+    "*",
+    "**/*"
+  ],
+  "C_Cpp_Runner.excludeSearch": [
+    "**/build",
+    "**/build/**",
+    "**/.*",
+    "**/.*/**",
+    "**/.vscode",
+    "**/.vscode/**"
+  ],
+  "C_Cpp_Runner.useAddressSanitizer": false,
+  "C_Cpp_Runner.showCompilationTime": false
 }

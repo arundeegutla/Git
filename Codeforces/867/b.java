@@ -20,7 +20,7 @@ public class b {
             long[] arr = in.nextLongArray(n);
 
             Arrays.sort(arr);
-            long max = Long.MIN_VALUE;
+            long max = -((long)1e18+1);
             for (int i = 0; i+1 < arr.length; i++) 
                 max = Math.max(max, arr[i]*arr[i+1]);
 
