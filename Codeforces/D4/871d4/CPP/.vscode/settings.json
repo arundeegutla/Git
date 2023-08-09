@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "__bit_reference": "cpp",
+        "iostream": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "map": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "queue": "cpp",
+        "ios": "cpp",
+        "iosfwd": "cpp"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "ios": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "vector": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp"
+    }
+}

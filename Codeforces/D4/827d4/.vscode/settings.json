@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "ios": "cpp",
+        "iostream": "cpp",
+        "random": "cpp",
+        "__tree": "cpp",
+        "map": "cpp",
+        "bitset": "cpp"
+    }
+}

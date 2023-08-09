@@ -32,5 +32,21 @@
     "**/.*/**",
     "**/.vscode",
     "**/.vscode/**"
-  ]
+  ],
+  "files.associations": {
+    "ios": "cpp",
+    "iostream": "cpp",
+    "iosfwd": "cpp",
+    "random": "cpp",
+    "unordered_map": "cpp",
+    "string": "cpp",
+    "queue": "cpp",
+    "bitset": "cpp",
+    "vector": "cpp",
+    "new": "cpp",
+    "unordered_set": "cpp",
+    "set": "cpp",
+    "istream": "cpp",
+    "__config": "cpp"
+  }
 }

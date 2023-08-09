@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "ios": "cpp",
+        "iosfwd": "cpp",
+        "vector": "cpp",
+        "string": "cpp",
+        "iomanip": "cpp",
+        "complex": "cpp",
+        "valarray": "cpp",
+        "__locale": "cpp",
+        "random": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "regex": "cpp"
+    }
+}

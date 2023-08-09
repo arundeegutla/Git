@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "ios": "cpp",
+        "set": "cpp",
+        "iosfwd": "cpp",
+        "limits": "cpp",
+        "valarray": "cpp",
+        "chrono": "cpp",
+        "random": "cpp",
+        "algorithm": "cpp",
+        "vector": "cpp",
+        "string": "cpp"
+    }
+}
