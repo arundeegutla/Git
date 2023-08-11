@@ -12,7 +12,7 @@ public class a {
         for (int i = 0; i < numInputs; i++)
         {
             String[] expression = in.nextLine().split(" "); 
-
+            // found
             boolean found = false;
 
             for (int j = 1; j <= 36; j++) 
