@@ -28,7 +28,8 @@
     "algorithm": "cpp",
     "regex": "cpp",
     "__string": "cpp",
-    "array": "cpp"
+    "array": "cpp",
+    "initializer_list": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "clang",
   "C_Cpp_Runner.cppCompilerPath": "clang++",

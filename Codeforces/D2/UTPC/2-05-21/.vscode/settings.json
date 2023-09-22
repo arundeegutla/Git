@@ -3,6 +3,10 @@
         "ios": "cpp",
         "queue": "cpp",
         "string": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "vector": "cpp",
+        "iostream": "cpp",
+        "initializer_list": "cpp",
+        "valarray": "cpp"
     }
 }

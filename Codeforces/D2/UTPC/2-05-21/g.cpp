@@ -8,20 +8,31 @@ string next(){string a; cin >> a; return a;}
 
 void solve() {
     string s = next();
-    sort(all(s));
+    int one = s.find("1");
+    s.erase(s.begin()+one, s.begin()+one+1);
+    int six = s.find("6");
+    s.erase(s.begin()+six, s.begin()+six+1);
+    int nine = s.find("9");
+    s.erase(s.begin()+nine, s.begin()+nine+1);
+    int eight = s.find("8");
+    s.erase(s.begin()+eight, s.begin()+eight+1);
 
-    ll count = 0;
-    ll all = 0;
+    int remainder = 0;
+    for(char c : s){
+        remainder *= 10;
+        remainder += c-'0';
+        remainder %= 7;
+    }
+    remainder *= 10000;
+    string perm = "1689";
+
     do {
-        ll num = stoll(s);
-        if(num%7 == 0){
-            cout << num << "\n";
-            count++;
+        if(!((remainder + stoi(perm)) % 7)){
+            cout << s << perm << "\n";
+            return;
         }
-        all++;
-    } while(next_permutation(all(s)));
 
-    cout << count << " " << all << "\n";
+    } while (next_permutation(all(perm)));
 
 }
 

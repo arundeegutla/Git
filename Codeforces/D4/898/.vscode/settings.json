@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "initializer_list": "cpp",
+        "valarray": "cpp",
+        "queue": "cpp",
+        "stack": "cpp",
+        "ios": "cpp",
+        "vector": "cpp",
+        "string": "cpp",
+        "__split_buffer": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "string_view": "cpp",
+        "iostream": "cpp",
+        "__locale": "cpp"
+    }
+}
