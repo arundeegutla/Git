@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "ios": "cpp",
+        "iosfwd": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "exception": "cpp",
+        "iostream": "cpp",
+        "queue": "cpp",
+        "stack": "cpp",
+        "deque": "cpp"
+    }
+}
