@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "vector": "cpp",
+    "initializer_list": "cpp",
+    "valarray": "cpp",
+    "set": "cpp",
+    "map": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp"
+  }
+}

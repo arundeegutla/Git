@@ -1,0 +1,14 @@
+{
+  "files.associations": {
+    "iostream": "cpp",
+    "vector": "cpp",
+    "string": "cpp",
+    "ios": "cpp",
+    "set": "cpp",
+    "valarray": "cpp",
+    "iomanip": "cpp",
+    "complex": "cpp",
+    "queue": "cpp",
+    "__tree": "cpp"
+  }
+}
