@@ -7,11 +7,11 @@ int main() {
     vector<vector<pair<int, ll>>> graph(n);
     while (m--) {
         ll s, e, a;
-        s--, e--;
         char t;
         cin >> s >> e >> t >> a;
+        s--, e--;
         if (t == 'r') a *= -1LL;
-        graph[s].push_back({a, e});
+        graph[s].push_back({e, a});
     }
 
     queue<int> q;
@@ -23,7 +23,7 @@ int main() {
         int here = q.front();
         q.pop();
         int d = dist[here];
-        for (auto [w, e] : graph[here]) {
+        for (auto [e, w] : graph[here]) {
             int next = d + w;
             if (dist[e] > next) {
                 dist[e] = next;
@@ -32,10 +32,9 @@ int main() {
         }
     }
 
-    int count = 0;
-    for (auto x : dist) {
-        count += x < 0;
+    for (int i = 0; i < n; i++) {
+        if (dist[i] < 0) {
+            cout << i + 1 << "\n";
+        }
     }
-
-    cout << count << "\n";
 }

@@ -4,6 +4,7 @@
     "bitset": "cpp",
     "limits": "cpp",
     "valarray": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "queue": "cpp"
   }
 }

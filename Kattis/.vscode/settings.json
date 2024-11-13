@@ -29,7 +29,11 @@
     "regex": "cpp",
     "__string": "cpp",
     "array": "cpp",
-    "initializer_list": "cpp"
+    "initializer_list": "cpp",
+    "any": "cpp",
+    "bitset": "cpp",
+    "future": "cpp",
+    "optional": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "clang",
   "C_Cpp_Runner.cppCompilerPath": "clang++",
