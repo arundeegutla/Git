@@ -1,3 +1,4 @@
+/.DS_Store
 .DS_Store
 .vscode
 *.in
@@ -5,3 +6,4 @@
 /a.out
 *.json
 .DS_Store/
+**/.DS_Store
