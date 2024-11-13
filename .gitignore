@@ -3,5 +3,5 @@
 *.in
 *.out
 /a.out
-.json
+*.json
 .DS_Store/
